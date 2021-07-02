@@ -81,5 +81,6 @@ if __name__ == '__main__':
 
 #przerób funkcję get_todos() z dao w taki sposób żeby pobierała dane z bazy a nie zwracała fejkowe dane
 
+#zadbaj o to żeby ekran szczegółów todosa pobierał dane z bazy.
 
 
