@@ -20,6 +20,12 @@ def get_products():
     return wynik
 
 def get_product(id):
-    product=Product(1,"Fejkowy produkt",555)
+    with pg.connect(host="localhost", port=5432, database="szkolenie", user="szkolenie", password="jsystems" ) as connection:
+        cursor=connection.cursor()
+        cursor.execute(f"select id_produktu,nazwa_produktu,cena_produktu from produkty where id_produktu={id}")
+        w=cursor.fetchone()
+        product=Product(w[0],w[1],w[2])
     return product
 
+p=get_product(1)
+print(p.product_id,p.product_name,p.product_price)
