@@ -18,6 +18,7 @@
         <th>Nazwa produktu</th>
         <th>Cena produktu</th>
         <th>Kolor</th>
+        <th>Akcje</th>
     </tr>
     {% for p in products %}
         <tr><td>{{ p.product_id }}</td><td>{{ p.product_name }}</td><td>{{ p.product_price }}</td>
@@ -29,6 +30,9 @@
             {% else %}
                 <font color="red">Czerwony</font>
             {% endif %}
+        </td>
+        <td>
+            <a href="/product_details?id={{ p.product_id }}">Szczegóły produktu</a>
         </td>
         </tr>
     {% endfor %}

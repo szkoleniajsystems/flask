@@ -13,6 +13,9 @@ def index():
     return render_template("index.html",author=at, languages=jezyki,products=get_products())
 
 
+@app.route('/product_details')
+def product_details():
+    return render_template("product_details.html")
 
 # @app.route('/')
 # def index():
@@ -58,6 +61,10 @@ if __name__ == '__main__':
 #przerwa do 11:55
 
 
+#zadbaj o to by na liście zadań nazwa zadania byla roznych kolorow w zaleznosci od priorytetu.
+#zielony=1
+#pomaranczowy=2
+#czerwony=3
 
 
 
