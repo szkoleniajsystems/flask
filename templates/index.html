@@ -9,5 +9,20 @@
 <h1>Strona główna!</h1>
 {{ author }}
 {{ author.imie }} {{ author.nazwisko }}
+{% for l in languages %}
+    {{ l }}<br>
+{% endfor %}
+<table border="1">
+    <tr>
+        <th>Id produktu</th>
+        <th>Nazwa produktu</th>
+        <th>Cena produktu</th>
+    </tr>
+    {% for p in products %}
+        <tr><td>{{ p.product_id }}</td><td>{{ p.product_name }}</td><td>{{ p.product_price }}</td></tr>
+    {% endfor %}
+</table>
+
+
 </body>
 </html>

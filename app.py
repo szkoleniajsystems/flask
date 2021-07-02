@@ -1,6 +1,6 @@
 from flask import Flask,render_template
 from domain import Author
-
+from dao import get_products
 app = Flask(__name__)
 
 #*args
@@ -9,7 +9,14 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     at=Author('Andrzej','Klusieiwcz')
-    return render_template("index.html",author=at)
+    jezyki=['python','pl/sql','java','assembler','C#']
+    return render_template("index.html",author=at, languages=jezyki,products=get_products())
+
+
+@app.route('/examples')
+def examples():
+    return render_template("examples.html")
+
 
 # @app.route('/')
 # def index():
