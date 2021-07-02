@@ -13,10 +13,6 @@ def index():
     return render_template("index.html",author=at, languages=jezyki,products=get_products())
 
 
-@app.route('/examples')
-def examples():
-    return render_template("examples.html")
-
 
 # @app.route('/')
 # def index():
@@ -48,3 +44,20 @@ if __name__ == '__main__':
 #Dodaj też moduł "dao.py" i umieść w nim funkcję get_author() która zwróci obiekt wraz z danymi. Dane o autorze
 #maja byc uzupelniane wewnątrz funkcji get_author(). Odbierz w metodzie mapujacej adres /about obiekt klasy Author
 #z naszego dao i przekaz do widoku. Na poziomie widoku wyswietl te dane w formie tabelarycznej.
+
+
+
+
+
+#Do aplikacji ToDos dodaj klasę ToDo. Klasa ta ma posiadać: todo_id, todo_name,todo_description,priority
+#Dodaj do dao funkcję get_todos() zwracającą listę jakichś fejkowych todos (ze 4 obiekty).
+#Przekaż dane odebrane z funkcji get_todos() i wyświetl w tabeli w widoku /list
+
+#statusy HTTP
+
+#przerwa do 11:55
+
+
+
+
+

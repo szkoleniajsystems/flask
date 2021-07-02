@@ -17,11 +17,23 @@
         <th>Id produktu</th>
         <th>Nazwa produktu</th>
         <th>Cena produktu</th>
+        <th>Kolor</th>
     </tr>
     {% for p in products %}
-        <tr><td>{{ p.product_id }}</td><td>{{ p.product_name }}</td><td>{{ p.product_price }}</td></tr>
+        <tr><td>{{ p.product_id }}</td><td>{{ p.product_name }}</td><td>{{ p.product_price }}</td>
+        <td>
+            {% if p.product_id == 1 %}
+                <font color="green">Zielony</font>
+            {% elif p.product_id==2 %}
+                <font color="orange">Pomarańczowy</font>
+            {% else %}
+                <font color="red">Czerwony</font>
+            {% endif %}
+        </td>
+        </tr>
     {% endfor %}
 </table>
+
 
 
 </body>
