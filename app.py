@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 from domain import Author
 from dao import get_products
 app = Flask(__name__)
@@ -15,6 +15,8 @@ def index():
 
 @app.route('/product_details')
 def product_details():
+    id=request.args.get('id')
+    print(f'szczegóły produktu o id={id}')
     return render_template("product_details.html")
 
 # @app.route('/')
@@ -65,6 +67,18 @@ if __name__ == '__main__':
 #zielony=1
 #pomaranczowy=2
 #czerwony=3
+
+
+
+#Dodaj ekran szczegółów zadania a na liście zadań dodaj linki prowadzące do tego ekranu z przekazanie id todosa
+
+
+
+
+
+
+
+
 
 
 
