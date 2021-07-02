@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect
 from domain import Author
 from dao import *
 app = Flask(__name__)
@@ -18,6 +18,20 @@ def product_details():
     id=request.args.get('id')
     print(f'szczegóły produktu o id={id}')
     return render_template("product_details.html",product=get_product(id))
+
+@app.route('/add_product')
+def add_product():
+    return render_template("add_product.html")
+
+@app.route('/add_product',methods=['POST'])
+def add_product_post():
+    nazwa=request.form['nazwa']
+    opis=request.form['opis']
+    cena=request.form['cena']
+    print(nazwa,opis,cena)
+    p=Product(None,nazwa,opis,cena)
+    save_product(p)
+    return redirect('/')
 
 # @app.route('/')
 # def index():
