@@ -74,7 +74,8 @@ if __name__ == '__main__':
 
 #W kontrolerze ekranu szczegółów ToDosa odczytaj id z paska i wyświetl na konsoli
 
-
+#Dodaj do dao metodę get_todo(x) która będzie przyjmować id todosa i zwracać jeden fejkowy obiekt klasy ToDo.
+#Przekaż ten obiekt do widoku ekranu szczegółów zadania i wyświetl w formie tabelarycznej.
 
 
 
