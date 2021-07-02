@@ -8,3 +8,7 @@ def get_products():
     wynik.append(Product(3, "Pykadło", 870))
     wynik.append(Product(4, "Tenteges", 120))
     return wynik
+
+def get_product(id):
+    product=Product(1,"Fejkowy produkt",555)
+    return product

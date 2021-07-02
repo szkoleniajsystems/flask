@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request
 from domain import Author
-from dao import get_products
+from dao import *
 app = Flask(__name__)
 
 #*args
@@ -17,7 +17,7 @@ def index():
 def product_details():
     id=request.args.get('id')
     print(f'szczegóły produktu o id={id}')
-    return render_template("product_details.html")
+    return render_template("product_details.html",product=get_product(id))
 
 # @app.route('/')
 # def index():
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
 #Dodaj ekran szczegółów zadania a na liście zadań dodaj linki prowadzące do tego ekranu z przekazanie id todosa
 
-
+#W kontrolerze ekranu szczegółów ToDosa odczytaj id z paska i wyświetl na konsoli
 
 
 
